@@ -8,7 +8,7 @@ type MyFixtures = {
 export const test = base.extend<MyFixtures>({
   userGaragePage: async ({ browser }, use) => {
     const context = await browser.newContext({
-      storageState: 'playwright/.auth/user.json',
+      storageState: 'test-data/states/user1.json',
     })
     const page = await context.newPage()
     const garagePage = new GaragePage(page)
