@@ -3,6 +3,16 @@ import { garageController } from '../../controllers/GarageController'
 import { getSidForUser } from '../../utils/api/getSidForUser'
 
 test.describe('Create car API tests', () => {
+  test.beforeEach(async ({ request }) => {
+    const sid = getSidForUser('user1')
+    const response = await garageController.getUserCars(request, sid)
+    const responseBody = await response.json()
+
+    for (const car of responseBody.data) {
+      await garageController.deleteCar(request, sid, car.id)
+    }
+  })
+
   test('should create a car with valid data', async ({ request }) => {
     const response = await garageController.createCar(request, getSidForUser('user1'), 1, 1, 122)
     const responseBody = await response.json()

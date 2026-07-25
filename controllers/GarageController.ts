@@ -35,6 +35,14 @@ class GarageController {
       },
     });
   }
+
+  async deleteCar(request: APIRequestContext, sid: string, carId: number) {
+    return await request.delete(`/api/cars/${carId}`, {
+      headers: {
+        Cookie: `sid=${sid}`,
+      },
+    });
+  }
 }
 
 export const garageController = new GarageController();

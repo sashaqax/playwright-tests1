@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Playwright: all tests",
+      "type": "npm",
+      "script": "test",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: smoke",
+      "type": "npm",
+      "script": "test:smoke",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: regression",
+      "type": "npm",
+      "script": "test:regression",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: UI mode",
+      "type": "npm",
+      "script": "test:ui",
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}

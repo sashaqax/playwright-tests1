@@ -1,0 +1,17 @@
+{
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": true,
+  "testing.automaticallyOpenPeekView": "never",
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/playwright-report": true,
+    "**/test-results": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/playwright-report": true,
+    "**/test-results": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+}
